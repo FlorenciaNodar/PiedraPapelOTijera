@@ -1,0 +1,50 @@
+<ion-header>
+  <!--<ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>-->
+</ion-header>
+
+
+<ion-content>
+
+     <!--  <ion-title text-center>Iniciar Sesión</ion-title><br>-->
+<ion-list>
+
+  <ion-item>
+    <ion-icon name="person" item-left></ion-icon>
+    <ion-label stacked>Email</ion-label>
+    <ion-input [(ngModel)]="email" name="email" type="text" value="" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-icon name="eye" item-left></ion-icon>
+    <ion-label stacked>Contraseña</ion-label>
+    <ion-input [(ngModel)]="password" name="password" type="password" value="" required></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+  <!--<button ion-button block  (click)="login()"></button>-->
+  <button ion-button round block icon-left (click)="Login()" color="dark">
+  <ion-icon name="log-in"></ion-icon>
+  INGRESAR
+</button>
+    <button ion-button round block icon-left (click)="LoginFace()">
+    <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+    <button ion-button round block icon-left (click)="LoginGit()" color="secondary">
+  <ion-icon name="logo-github"></ion-icon>
+        </button>
+    <button ion-button round block icon-left (click)="LoginGoogle()" color="danger">
+      <ion-icon name="logo-googleplus"></ion-icon>
+        </button>
+          <button ion-button round block icon-left (click)="Register()" color="light">
+  <ion-icon name="add"></ion-icon>
+  REGISTRARSE
+</button>
+</div>
+
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Registrarse</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+ <ion-list>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Nombre:</ion-label>
+        <ion-input [(ngModel)]="usuario.nombre" type="text" placeholder="Nombre" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <ion-label stacked>Correo electronico:</ion-label>
+        <ion-input  [(ngModel)]="usuario.email" type="email" placeholder="Email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar" item-left></ion-icon>
+        <ion-label stacked>Fecha de nacimiento:</ion-label>
+        <ion-datetime  [(ngModel)]="usuario.datetime" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY"></ion-datetime>
+      </ion-item>
+        <ion-item>
+          <ion-icon name="eye" item-left></ion-icon>
+          <ion-label stacked>Contraseña:</ion-label>
+          <ion-input [(ngModel)]="usuario.password" type="password" placeholder="Contraseña" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="eye" item-left></ion-icon>
+          <ion-label stacked>Confirmar contraseña:</ion-label>
+          <ion-input [(ngModel)]="usuario.password2" type="password" placeholder="Confirmar contraseña" required></ion-input>
+        </ion-item>
+    </ion-list>
+<!--<ion-list>
+ 
+  <ion-item>
+    <ion-icon name="person" item-left></ion-icon>
+    <ion-label floating>Nombre</ion-label>
+    <ion-input [(ngModel)]="usuario.username" type="text" value="" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-icon name="eye" item-left></ion-icon>
+    <ion-label floating>Contraseña</ion-label>
+    <ion-input [(ngModel)]="usuario.password"  type="password" value="" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-icon name="eye" item-left></ion-icon>
+  <ion-label floating>Repetir contraseña</ion-label>
+  <ion-input [(ngModel)]="usuario.password2"  type="password" value="" required></ion-input>
+  </ion-item>
+
+</ion-list>-->
+
+<div padding>
+  <!--<button ion-button block  (click)="login()"></button>-->
+  <button ion-button round block icon-left (click)="clicked(usuario)">
+  <ion-icon name="checkmark-circle-outline"></ion-icon>
+  ACEPTAR
+</button>
+</div>
+
+</ion-content>
