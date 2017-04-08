@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AuthProviders, AuthMethods, AngularFire } from 'angularfire2';
+import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+import { Register } from '../register/register';
+ 
+
 
 @Component({
   selector: 'page-login',
@@ -66,9 +70,18 @@ export class Login {
         };
         window.localStorage.setItem('currentuser', JSON.stringify(currentuser));
         this.navCtrl.pop();
+
       }).catch((error) => {
         console.log(error);
     })
+                  this.navCtrl.push(HelloIonicPage);
+
+  }
+
+
+  Register(){
+
+    this.navCtrl.push(Register);
   }
 
   
@@ -86,6 +99,7 @@ export class Login {
         window.localStorage.setItem('currentuser', JSON.stringify(currentuser));
         this.navCtrl.pop();
       }).catch((error) => {
+
         console.log(error);
     })
   }

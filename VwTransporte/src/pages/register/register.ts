@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { Login } from '../login/login';
 
 
 @Component({
@@ -6,10 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: 'register.html'
 })
 export class Register {
-  constructor() {}
+  constructor(public navCtrl: NavController) {}
 
-  	public usuario ={nombre:""};
+  	/*public usuario ={nombre:""};
 	clicked(event){
 	console.log(event);
-	}
+	}*/
+
+VolverAlLogin(){
+	this.navCtrl.setRoot(Login);
+}
+
 }

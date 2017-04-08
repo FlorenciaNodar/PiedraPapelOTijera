@@ -9,6 +9,7 @@ import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Grid } from '../pages/grid/grid';
 
+import { Platform, MenuController, Nav, NavController } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -54,6 +55,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+  
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
