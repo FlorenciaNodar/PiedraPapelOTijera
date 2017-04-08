@@ -35,4 +35,58 @@ export class Login {
         console.log(error);
     })
   }
+
+  LoginFace(){
+      this.angfire.auth.login({
+      provider: AuthProviders.Facebook,
+      method: AuthMethods.Popup
+    }).then((response) => {
+      console.log('Login success with facebook' + JSON.stringify(response));
+      let currentuser = {
+          email: response.auth.displayName,
+          picture: response.auth.photoURL
+        };
+        window.localStorage.setItem('currentuser', JSON.stringify(currentuser));
+        this.navCtrl.pop();
+      }).catch((error) => {
+        console.log(error);
+    })
+  }
+
+  
+  LoginGit(){
+      this.angfire.auth.login({
+      provider: AuthProviders.Github,
+      method: AuthMethods.Popup
+    }).then((response) => {
+      console.log('Login success with GitHub' + JSON.stringify(response));
+      let currentuser = {
+          email: response.auth.displayName,
+          picture: response.auth.photoURL
+        };
+        window.localStorage.setItem('currentuser', JSON.stringify(currentuser));
+        this.navCtrl.pop();
+      }).catch((error) => {
+        console.log(error);
+    })
+  }
+
+  
+  
+  LoginGoogle(){
+      this.angfire.auth.login({
+      provider: AuthProviders.Google,
+      method: AuthMethods.Popup
+    }).then((response) => {
+      console.log('Login success with Google+' + JSON.stringify(response));
+      let currentuser = {
+          email: response.auth.displayName,
+          picture: response.auth.photoURL
+        };
+        window.localStorage.setItem('currentuser', JSON.stringify(currentuser));
+        this.navCtrl.pop();
+      }).catch((error) => {
+        console.log(error);
+    })
+  }
 }
