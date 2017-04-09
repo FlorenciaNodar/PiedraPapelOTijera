@@ -10,6 +10,7 @@ import { ListPage } from '../pages/list/list';
 import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Grid } from '../pages/grid/grid';
+import { Trivia } from '../pages/trivia/trivia';
 
 
 
@@ -33,8 +34,8 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Inicio', component: HelloIonicPage },
-      { title: 'Login', component: Login },
+      { title: 'Trivia', component: Trivia },
+      { title: 'Desloguearse', component: Login },
       { title: 'Register', component: Register },
       { title: 'Lista de Usuarios', component: Grid },
       { title: 'My First List', component: ListPage }

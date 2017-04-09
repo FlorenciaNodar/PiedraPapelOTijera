@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Grid } from '../pages/grid/grid';
+import { Trivia } from '../pages/trivia/trivia';
 
 import { Platform, MenuController, Nav, NavController } from 'ionic-angular';
 
@@ -35,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     Login,
     Grid,
+    Trivia,
     Register
   ],
   imports: [
@@ -50,6 +52,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     Login,
     Grid,
+    Trivia,
     Register
   ],
   providers: [

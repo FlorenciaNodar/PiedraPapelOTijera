@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AuthProviders, AuthMethods, AngularFire } from 'angularfire2';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { Register } from '../register/register';
+import { Grid } from '../grid/grid';
+import { AlertController } from 'ionic-angular';
  
 
 
@@ -13,7 +15,7 @@ import { Register } from '../register/register';
 export class Login {
   email: any;
   password: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire, public alertCtrl: AlertController) {}
  
   ionViewDidLoad() {
     console.log('ionViewDidLoad Login');
@@ -37,6 +39,13 @@ export class Login {
         this.navCtrl.pop();
       }).catch((error) => {
         console.log(error);
+          let alert = this.alertCtrl.create({
+          title: 'ERROR!',
+          subTitle: 'Usuario y/o contraseña incorrectas!',
+          buttons: ['OK']
+          });
+          alert.present();
+          
     })
   }
 
@@ -74,7 +83,7 @@ export class Login {
       }).catch((error) => {
         console.log(error);
     })
-                  this.navCtrl.push(HelloIonicPage);
+                  this.navCtrl.push(Grid);
 
   }
 

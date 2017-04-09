@@ -1,6 +1,6 @@
+import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Login } from '../login/login';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class Register {
 	}*/
 
 VolverAlLogin(){
-	this.navCtrl.setRoot(Login);
+	this.navCtrl.setRoot(HelloIonicPage);
 }
 
 }
