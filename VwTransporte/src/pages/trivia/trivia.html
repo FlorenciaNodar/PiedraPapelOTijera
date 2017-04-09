@@ -3,50 +3,32 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Juego de Preguntas</ion-title>
+    <ion-title>Señales de tránsito</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
+    <br>
+<ion-list radio-group>
+<div align="center">
+        <img src="assets/images/puesto-sanitario.png"/>
+      </div>
+  <ion-item>
+    <ion-label>Puesto sanitario</ion-label>
+    <ion-radio value="go"></ion-radio>
+  </ion-item>
 
-<ion-grid>
- 
-  <ion-row>
-    <ion-col col-4 >
-        <ion-icon name="person" item-left></ion-icon>
-        <ion-label stacked>Nombre:</ion-label>
-        <ion-label stacked>Email:</ion-label>
-    </ion-col>
-     <ion-col col-4>
-        <ion-icon name="person" item-left></ion-icon>
-                <ion-label stacked>Nombre:</ion-label>
-        <ion-label stacked>Email:</ion-label>
-    </ion-col>
-     <ion-col col-4>
-        <ion-icon name="person" item-left></ion-icon>
-                <ion-label stacked>Nombre:</ion-label>
-        <ion-label stacked>Email:</ion-label>
-    </ion-col>
-     <ion-col col-4>
-        <ion-icon name="person" item-left></ion-icon>
-                <ion-label stacked>Nombre:</ion-label>
-        <ion-label stacked>Email:</ion-label>
-    </ion-col>
-     <ion-col col-4>
-        <ion-icon name="person" item-left></ion-icon>
-                <ion-label stacked>Nombre:</ion-label>
-        <ion-label stacked>Email:</ion-label>
-    </ion-col>
-     <ion-col col-4>
-        <ion-icon name="person" item-left></ion-icon>
-                <ion-label stacked>Nombre:</ion-label>
-        <ion-label stacked>Email:</ion-label>
-    </ion-col>
-  </ion-row>
+  <ion-item>
+    <ion-label>Punto panorámico</ion-label>
+    <ion-radio value="rust"></ion-radio>
+  </ion-item>
 
-</ion-grid>
-
+  <ion-item>
+    <ion-label>Servicio mecánico</ion-label>
+    <ion-radio value="python"></ion-radio>
+  </ion-item>
+</ion-list>
 
 
 </ion-content>

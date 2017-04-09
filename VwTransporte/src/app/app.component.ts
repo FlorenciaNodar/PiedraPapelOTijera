@@ -35,10 +35,10 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Trivia', component: Trivia },
-      { title: 'Desloguearse', component: Login },
-      { title: 'Register', component: Register },
+     /* { title: 'Register', component: Register },*/
       { title: 'Lista de Usuarios', component: Grid },
-      { title: 'My First List', component: ListPage }
+      { title: 'My First List', component: ListPage },
+      { title: 'Desloguearse', component: Login }
 
     ];
   }

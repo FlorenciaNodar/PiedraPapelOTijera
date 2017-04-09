@@ -3,8 +3,9 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AuthProviders, AuthMethods, AngularFire } from 'angularfire2';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { Register } from '../register/register';
-import { Grid } from '../grid/grid';
+import { Trivia } from '../trivia/trivia';
 import { AlertController } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular';
  
 
 
@@ -15,21 +16,31 @@ import { AlertController } from 'ionic-angular';
 export class Login {
   email: any;
   password: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire, public alertCtrl: AlertController) {}
+  constructor(public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire, public alertCtrl: AlertController) {}
  
   ionViewDidLoad() {
     console.log('ionViewDidLoad Login');
   }
  
   Login() {
+       let loader = this.loadingCtrl.create({
+      content: "Espere...",
+      duration: 3000
+    });
+    loader.present();
     this.angfire.auth.login({
+      
       email: this.email,
       password: this.password
     },
+    
       {
+        
         provider: AuthProviders.Password,
         method: AuthMethods.Password  
       }).then((response) => {
+       
+      
         console.log('Login success' + JSON.stringify(response));
         let currentuser = {
           email: response.auth.email,
@@ -50,6 +61,11 @@ export class Login {
   }
 
   LoginFace(){
+         let loader = this.loadingCtrl.create({
+      content: "Espere...",
+      duration: 3000
+    });
+    loader.present();
       this.angfire.auth.login({
       provider: AuthProviders.Facebook,
       method: AuthMethods.Popup
@@ -68,6 +84,11 @@ export class Login {
 
   
   LoginGit(){
+         let loader = this.loadingCtrl.create({
+      content: "Espere...",
+      duration: 3000
+    });
+    loader.present();
       this.angfire.auth.login({
       provider: AuthProviders.Github,
       method: AuthMethods.Popup
@@ -83,7 +104,7 @@ export class Login {
       }).catch((error) => {
         console.log(error);
     })
-                  this.navCtrl.push(Grid);
+   this.navCtrl.push(Trivia);
 
   }
 
@@ -96,6 +117,11 @@ export class Login {
   
   
   LoginGoogle(){
+         let loader = this.loadingCtrl.create({
+      content: "Espere...",
+      duration: 3000
+    });
+    loader.present();
       this.angfire.auth.login({
       provider: AuthProviders.Google,
       method: AuthMethods.Popup
