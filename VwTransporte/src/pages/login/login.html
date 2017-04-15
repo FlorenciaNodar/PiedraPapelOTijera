@@ -1,26 +1,38 @@
+<style>
+
+ .navbarInicio {
+ text-shadow: 1px 2px 5px #808080;
+ }
+ .Login {
+  background-image: url("http://marketinglibelula.com/wp-content/uploads/2015/05/different-roads.jpg") }
+
+
+  .TextoInicio h1 {
+	text-align: center;
+}
+</style>
+
 <ion-header>
-  <!--<ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-  </ion-navbar>-->
-</ion-header>
+  <div class="TextoInicio">
+      <h1>¡Bienvenido al Juego de Trivia!</h1>
+   </div>
+   </ion-header>
 
-
-<ion-content>
+<ion-content padding class="Login" ><br><br><br><br>
+    <h3 align="center" >Inicie sesión para poder jugar</h3>
 
      <!--  <ion-title text-center>Iniciar Sesión</ion-title><br>-->
 <ion-list>
 
-  <ion-item>
+  <ion-item style="background-color: transparent">
     <ion-icon name="person" item-left></ion-icon>
-    <ion-label stacked>Email</ion-label>
+    <ion-label stacked >Email</ion-label>
     <ion-input [(ngModel)]="email" name="email" type="text" value="" required></ion-input>
   </ion-item>
 
-  <ion-item>
-      <ion-icon name="eye" item-left></ion-icon>
-    <ion-label stacked>Contraseña</ion-label>
+  <ion-item style="background-color: transparent">
+      <ion-icon name="key" item-left></ion-icon>
+    <ion-label stacked >Contraseña</ion-label>
     <ion-input [(ngModel)]="password" name="password" type="password" value="" required></ion-input>
   </ion-item>
 
@@ -41,10 +53,10 @@
     <button ion-button round block icon-left (click)="LoginGoogle()" color="danger">
       <ion-icon name="logo-googleplus"></ion-icon>
         </button>
-          <button ion-button block icon-left (click)="Register()" color="light">
+         <!-- <button ion-button block icon-left (click)="Register()" color="light">
   <ion-icon name="return-right"></ion-icon>
   REGISTRARSE
-</button>
+</button>-->
 </div>
 
 </ion-content>
