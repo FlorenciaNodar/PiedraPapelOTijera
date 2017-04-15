@@ -11,6 +11,7 @@ import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Grid } from '../pages/grid/grid';
 import { Trivia } from '../pages/trivia/trivia';
+import { Autor } from '../pages/autor/autor';
 
 
 
@@ -35,6 +36,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Trivia', component: Trivia },
+      { title: 'Autor', component: Autor },
      /* { title: 'Register', component: Register },*/
       { title: 'Lista de Usuarios', component: Grid },
       { title: 'My First List', component: ListPage },

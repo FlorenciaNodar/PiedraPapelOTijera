@@ -9,6 +9,7 @@ import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Grid } from '../pages/grid/grid';
 import { Trivia } from '../pages/trivia/trivia';
+import { Autor } from '../pages/autor/autor';
 
 import { Platform, MenuController, Nav, NavController } from 'ionic-angular';
 
@@ -37,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Login,
     Grid,
     Trivia,
-    Register
+    Register,
+    Autor
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -53,7 +55,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Login,
     Grid,
     Trivia,
-    Register
+    Register,
+    Autor
   ],
   providers: [
     StatusBar,

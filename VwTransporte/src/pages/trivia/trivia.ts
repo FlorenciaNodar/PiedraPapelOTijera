@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Login } from '../login/login';
+//import { TriviaUno } from '../triviaUno/triviaUno';
 
 
 @Component({
@@ -9,7 +10,11 @@ import { Login } from '../login/login';
 })
 export class Trivia{
 
-constructor() {}
+constructor(public navCtrl: NavController) {}
 
+
+/*siguiente(){
+  this.navCtrl.push(TriviaUno);
+}*/
  
 }

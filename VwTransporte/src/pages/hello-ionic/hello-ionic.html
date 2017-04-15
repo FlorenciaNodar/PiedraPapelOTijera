@@ -1,4 +1,4 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -8,7 +8,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<!--<ion-content padding>
 
   <h3>Bienvenido al Dashboard</h3>
 
@@ -21,4 +21,72 @@
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
   </p>-->
 
+<!--</ion-content>-->
+
+<style>
+
+ .navbarInicio {
+ text-shadow: 1px 2px 5px #808080;
+ }
+ .Login {
+  background-image: url("http://marketinglibelula.com/wp-content/uploads/2015/05/different-roads.jpg") }
+
+
+  .TextoInicio h1 {
+	text-align: center;
+}
+</style>
+
+<ion-header>
+  <div class="TextoInicio">
+      <h1>TwTransporte</h1>
+   </div>
+   </ion-header>
+
+<ion-content padding class="Login" ><br><br><br><br>
+ 
+ 
+  <div style="text-align: center;">
+<button round block ion-button icon-right (click)="trivia()" >
+  ¡Jugar ahora!
+  <ion-icon name="game-controller-b"></ion-icon>
+</button>
+</div> 
+ <div style="text-align: center">
+<button round block ion-button icon-right (click)="reglas()" >
+  Reglas del juego
+  <ion-icon name="clipboard"></ion-icon>
+</button>
+</div>
+  <div style="text-align: center">
+<button  round block ion-button icon-right (click)="autor()" >
+  Autor
+  <ion-icon name="contacts"></ion-icon>
+</button>
+</div>  
+<div style="text-align: center">
+<button  round block ion-button icon-right (click)="desloguearse()" >
+  Desloguearse
+  <ion-icon name="log-out"></ion-icon>
+</button>
+</div>
+<br>
+     <!--  <ion-title text-center>Iniciar Sesión</ion-title><br>-->
+<!--<ion-list>
+<ion-card>
+  <img src="assets/images/FotoCarnet.png"/>
+  <ion-card-content>
+    <ion-card-title>
+<ion-icon name="person" item-left></ion-icon> Florencia Nodar
+      </ion-card-title>
+    <p>
+         <ion-icon name="mail" item-left></ion-icon> fnodar14@gmail.com<br>
+         <ion-icon name="logo-github" item-left></ion-icon> https://github.com/FlorenciaNodar/
+    </p>
+  </ion-card-content>
+</ion-card>
+</ion-list>-->
+
+
 </ion-content>
+

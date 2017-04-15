@@ -1,6 +1,9 @@
+import { root } from 'rxjs/util/root';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Login } from '../login/login';
+import {Trivia} from '../trivia/trivia';
+import {Autor} from '../autor/autor';
 
 
 @Component({
@@ -21,6 +24,22 @@ constructor(public navCtrl: NavController) {
     if (window.localStorage.getItem('currentuser')) {
       return true;
     }
+  }
+
+  trivia(){
+      this.navCtrl.push(Trivia);
+  } 
+  reglas()
+  {
+      this.navCtrl.push(Trivia);
+  } 
+  autor()
+  {
+      this.navCtrl.push(Autor);
+  }
+  desloguearse()
+  {
+      this.navCtrl.push(Login);
   }
  
 }
