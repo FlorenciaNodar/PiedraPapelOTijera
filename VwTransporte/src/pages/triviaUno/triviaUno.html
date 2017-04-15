@@ -12,41 +12,40 @@
 }
 </style>
 
-<ion-header   padding class="Login">
-  <ion-navbar   padding class="Login">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Señales de tránsito</ion-title>
-  </ion-navbar>
-</ion-header>
 
 
-<ion-content  padding class="Login"><br>
+
+
+<ion-content  padding class="Login">
+
+<br>
     <strong><h3 style="text-align: center">Elija una opción</h3></strong>
     <br>
 
 <ion-list radio-group>
 <div align="center">
-        <img src="assets/images/s30.jpg"/>
+        <img src="assets/images/s29.jpg"/>
       </div>
   <ion-item>
-    <ion-label>Zona rural</ion-label>
+    <ion-label>Camino de cornisa</ion-label>
     <ion-radio checked="true" value="go" ></ion-radio>
   </ion-item>
 
   <ion-item>
-    <ion-label>Animales Sueltos</ion-label>
+    <ion-label>Pendiente ascendente</ion-label>
     <ion-radio value="rust"></ion-radio>
   </ion-item>
 
   <ion-item>
-    <ion-label>Zoológico</ion-label>
+    <ion-label>Pendiente descendiente</ion-label>
     <ion-radio value="python"></ion-radio>
   </ion-item>
 </ion-list>
-
-<div style="text-align: center;">
+    <div style="text-align: center;">
+    <button ion-button icon-right (click)="anterior()" >
+ Anterior
+  <ion-icon name="arrow-round-back"></ion-icon>
+</button>
 <button ion-button icon-right (click)="siguiente()" >
  Próximo
   <ion-icon name="arrow-round-forward"></ion-icon>

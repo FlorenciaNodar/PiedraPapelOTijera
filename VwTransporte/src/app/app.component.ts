@@ -12,6 +12,7 @@ import { Register } from '../pages/register/register';
 import { Grid } from '../pages/grid/grid';
 import { Trivia } from '../pages/trivia/trivia';
 import { Autor } from '../pages/autor/autor';
+import { TriviaUno } from '../pages/triviaUno/triviaUno';
 
 
 
@@ -40,7 +41,8 @@ export class MyApp {
      /* { title: 'Register', component: Register },*/
       { title: 'Lista de Usuarios', component: Grid },
       { title: 'My First List', component: ListPage },
-      { title: 'Desloguearse', component: Login }
+      { title: 'Desloguearse', component: Login },
+      { title: 'TriviaUno', component: TriviaUno }
 
     ];
   }
