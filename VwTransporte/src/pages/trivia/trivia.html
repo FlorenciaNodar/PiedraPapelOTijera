@@ -12,14 +12,6 @@
 }
 </style>
 
-<ion-header   padding class="Login">
-  <ion-navbar   padding class="Login">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Señales de tránsito</ion-title>
-  </ion-navbar>
-</ion-header>
 
 
 <ion-content  padding class="Login"><br>
@@ -47,6 +39,10 @@
 </ion-list>
 
 <div style="text-align: center;">
+  <button ion-button icon-left (click)="anterior()" >
+        <ion-icon name="arrow-round-back"></ion-icon>
+ Volver al Menú
+</button>
 <button ion-button icon-right (click)="siguiente()" >
  Próximo
   <ion-icon name="arrow-round-forward"></ion-icon>
