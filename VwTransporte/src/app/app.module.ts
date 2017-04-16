@@ -11,6 +11,12 @@ import { Grid } from '../pages/grid/grid';
 import { Trivia } from '../pages/trivia/trivia';
 import { Autor } from '../pages/autor/autor';
 import { TriviaUno } from '../pages/triviaUno/triviaUno';
+import { TriviaDos } from '../pages/triviaDos/triviaDos';
+import { TriviaTres } from '../pages/triviaTres/triviaTres';
+import { TriviaCuatro } from '../pages/triviaCuatro/triviaCuatro';
+import { TriviaCinco } from '../pages/triviaCinco/triviaCinco';
+import { TriviaSeis } from '../pages/triviaSeis/triviaSeis';
+import { TriviaSiete } from '../pages/triviaSiete/triviaSiete';
 
 import { Platform, MenuController, Nav, NavController } from 'ionic-angular';
 
@@ -41,7 +47,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Trivia,
     Register,
     Autor,
-    TriviaUno
+    TriviaUno,
+    TriviaDos,
+    TriviaTres,
+    TriviaCuatro,
+    TriviaCinco,
+    TriviaSeis,
+    TriviaSiete
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -59,7 +71,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Trivia,
     Register,
     Autor,
-    TriviaUno
+    TriviaUno,
+    TriviaDos,
+    TriviaTres,
+    TriviaCuatro,
+    TriviaCinco,
+    TriviaSeis,
+    TriviaSiete
   ],
   providers: [
     StatusBar,

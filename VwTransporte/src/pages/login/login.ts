@@ -23,7 +23,8 @@ export class Login {
   }
  
   Login() {
-       let loader = this.loadingCtrl.create({
+
+      let loader = this.loadingCtrl.create({
       content: "Espere...",
       duration: 3000
     });
@@ -33,14 +34,11 @@ export class Login {
       email: this.email,
       password: this.password
     },
-    
       {
-        
         provider: AuthProviders.Password,
         method: AuthMethods.Password  
       }).then((response) => {
-       
-      
+     
         console.log('Login success' + JSON.stringify(response));
         let currentuser = {
           email: response.auth.email,

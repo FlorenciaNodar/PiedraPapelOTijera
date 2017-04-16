@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Login } from '../login/login';
-import { Trivia } from '../trivia/trivia';
 import { TriviaDos } from '../triviaDos/triviaDos';
+import { TriviaCuatro } from '../triviaCuatro/triviaCuatro';
 
 
 @Component({
-  selector: 'triviaUno',
-  templateUrl: 'triviaUno.html'
+  selector: 'triviaTres',
+  templateUrl: 'triviaTres.html'
 })
-export class TriviaUno{
+export class TriviaTres{
 
 constructor(public navCtrl: NavController) {}
 
 
 siguiente(){
-  this.navCtrl.push(TriviaDos);
+  this.navCtrl.push(TriviaCuatro);
 }
 
 anterior(){
-  this.navCtrl.push(Trivia);
+  this.navCtrl.push(TriviaDos);
 }
  
 }
