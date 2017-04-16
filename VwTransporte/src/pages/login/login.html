@@ -6,9 +6,37 @@
  .Login {
   background-image: url("http://marketinglibelula.com/wp-content/uploads/2015/05/different-roads.jpg") }
 
+ input[type=text] {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 7px ridge firebrick;
+  border-radius: 4px;
+  width: 250px;
+  height: 40px;
+  box-shadow: -5px 10px 4px #808080;
+  background-color: transparent; }
+  
+  input[type=password] {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 7px ridge firebrick;
+  border-radius: 4px;
+  width: 250px;
+  height: 40px;
+  box-shadow: -5px 10px 4px #808080;
+  background-color: transparent; }
 
+
+  h3{
+    font-family: fantasy;
+  }
+  
   .TextoInicio h1 {
 	text-align: center;
+      font-family: fantasy;
+
 }
 </style>
 
@@ -19,30 +47,24 @@
    </ion-header>
 
 <ion-content padding class="Login" ><br><br><br><br>
-    <h3 align="center" >Inicie sesión para poder jugar</h3>
+    <h3     align="center" >Inicie sesión para poder jugar</h3><br>
 
      <!--  <ion-title text-center>Iniciar Sesión</ion-title><br>-->
 <ion-list>
 
-  <ion-item style="background-color: transparent">
-    <ion-icon name="person" item-left></ion-icon>
-    <ion-label stacked >Email</ion-label>
-    <ion-input [(ngModel)]="email" name="email" type="text" value="" required></ion-input>
-  </ion-item>
+        <ion-icon style="font-size: 40px" name="person" item-left></ion-icon>&nbsp;&nbsp;&nbsp;
+    <input placeholder="Mail" [(ngModel)]="email" name="email" type="text" value="" required><br>
 
-  <ion-item style="background-color: transparent">
-      <ion-icon name="key" item-left></ion-icon>
-    <ion-label stacked >Contraseña</ion-label>
-    <ion-input [(ngModel)]="password" name="password" type="password" value="" required></ion-input>
-  </ion-item>
+      <ion-icon style="font-size: 40px" name="key" item-left></ion-icon>&nbsp;&nbsp;
+    <input placeholder="Contraseña" [(ngModel)]="password" name="password" type="password" value="" required>
 
 </ion-list>
 
 <div padding>
   <!--<button ion-button block  (click)="login()"></button>-->
-  <button ion-button round block icon-left (click)="Login()" color="danger" >
+  <button ion-button block icon-left (click)="Login()" color="danger" >
   <ion-icon name="log-in"></ion-icon>
-  INGRESAR
+  <p>INGRESAR</p>
 </button>
    <!-- <button ion-button round block icon-left (click)="LoginFace()">
     <ion-icon name="logo-facebook"></ion-icon>

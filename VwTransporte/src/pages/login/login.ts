@@ -22,6 +22,7 @@ export class Login {
     console.log('ionViewDidLoad Login');
   }
  
+ 
   Login() {
 
       let loader = this.loadingCtrl.create({
