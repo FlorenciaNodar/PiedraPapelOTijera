@@ -26,10 +26,15 @@
   width: 250px;
   height: 40px;
   box-shadow: -5px 10px 4px #808080;
-  background-color: transparent; }
+  background-color: transparent; } 
+  
+  
 
 
   h3{
+    font-family: fantasy;
+  }
+  h2{
     font-family: fantasy;
   }
   
@@ -42,12 +47,13 @@
 
 <ion-header>
   <div class="TextoInicio">
-      <h1>¡Bienvenido al Juego de Trivia!</h1>
+      <h1>¡Juego de Trivia!</h1>
    </div>
    </ion-header>
 
 <ion-content padding class="Login" ><br><br><br><br>
-    <h3     align="center" >Inicie sesión para poder jugar</h3><br>
+    <h3     align="center" >Aprende las señales de tránsito</h3><br>
+    <h2     align="center" >Inicie sesión para poder jugar</h2><br>
 
      <!--  <ion-title text-center>Iniciar Sesión</ion-title><br>-->
 <ion-list>
@@ -62,7 +68,7 @@
 
 <div padding>
   <!--<button ion-button block  (click)="login()"></button>-->
-  <button ion-button block icon-left (click)="Login()" color="danger" >
+  <button ion-button block icon-left (click)="Login()" color= "danger" style=" border: 5px ridge firebrick;" >
   <ion-icon name="log-in"></ion-icon>
   <p>INGRESAR</p>
 </button>

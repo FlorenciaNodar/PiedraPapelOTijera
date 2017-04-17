@@ -34,6 +34,7 @@ export class Login {
       
       email: this.email,
       password: this.password
+  
     },
       {
         provider: AuthProviders.Password,
