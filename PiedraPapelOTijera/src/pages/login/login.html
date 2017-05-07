@@ -1,0 +1,23 @@
+<ion-header>
+  <div class="TextoInicio">
+      <strong><h1>¡Piedra papel o tijera!</h1></strong>
+   </div>
+   </ion-header>
+
+<ion-content padding class="Login" ><br>
+    <h2 align="center" >Ingrese nombre del jugador</h2><br>
+<ion-list>
+    <ion-icon style="font-size: 40px" name="person" item-left></ion-icon>&nbsp;&nbsp;&nbsp;
+    <input placeholder="jugador" [(ngModel)]="email" name="email" type="text" value="" required><br>
+</ion-list>
+
+<div padding>
+  <!--<button ion-button block  (click)="login()"></button>-->
+  <button ion-button block icon-left (click)="Login()" color= "danger" style=" border: 5px ridge firebrick;" >
+  <ion-icon name="log-in"></ion-icon>
+  <p>INGRESAR</p>
+</button>
+   
+</div>
+
+</ion-content>
