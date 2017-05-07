@@ -1,54 +1,50 @@
 <style>
-
- .navbarInicio {
- text-shadow: 1px 2px 5px #808080;
- }
- .Login {
-  background-image: url("http://marketinglibelula.com/wp-content/uploads/2015/05/different-roads.jpg") }
-
-
-  h3{
-    font-family: fantasy;
-  }
-
-  .TextoInicio h1 {
-	text-align: center;
-      font-family: fantasy;
-
-}
+    .navbarInicio {
+        text-shadow: 1px 2px 5px #808080;
+    }
+    
+    .Login {
+        background-image: url("http://marketinglibelula.com/wp-content/uploads/2015/05/different-roads.jpg")
+    }
+    
+    h3 {
+        font-family: fantasy;
+    }
+    
+    .TextoInicio h1 {
+        text-align: center;
+        font-family: fantasy;
+    }
 </style>
 
-
-
-<ion-content  padding class="Login"><br>
+<ion-content padding class="Login"><br>
     <strong><h3 style="text-align: center">Elija una opción</h3></strong>
     <br>
+    <!--<img src="assets/images/s30.jpg"/>-->
+    <ion-list [(ngModel)]="preguntaSeleccionada.respuesta"  radio-group>
+    <ion-list-header>
+            {{preguntaSeleccionada.titulo}}
+    </ion-list-header>
+        <ion-item>
+            <ion-label>{{preguntaSeleccionada.opcion1}}</ion-label>
+            <ion-radio value="1"></ion-radio>
+        </ion-item>
 
-<ion-list radio-group>
-<div align="center">
-        <img src="assets/images/s30.jpg"/>
-      </div>
-  <ion-item>
-    <ion-label>Zona rural</ion-label>
-    <ion-radio checked="true" value="go" ></ion-radio>
-  </ion-item>
+        <ion-item>
+            <ion-label>{{preguntaSeleccionada.opcion2}}</ion-label>
+            <ion-radio value="2" ></ion-radio>
+        </ion-item>
 
-  <ion-item>
-    <ion-label>Animales Sueltos</ion-label>
-    <ion-radio value="rust"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Zoológico</ion-label>
-    <ion-radio value="python"></ion-radio>
-  </ion-item>
-</ion-list>
-
-<div style="text-align: center;">
-<button ion-button icon-right (click)="siguiente()" >
- Próximo
+        <ion-item>
+            <ion-label>{{preguntaSeleccionada.opcion3}}</ion-label>
+            <ion-radio value="3"></ion-radio>
+        </ion-item>
+    </ion-list>
+   <div style="text-align: center;">
+        <button ion-button icon-right (click)="siguiente()">
+ {{nombreBoton}}
   <ion-icon name="arrow-round-forward"></ion-icon>
 </button>
-</div> 
+    </div>
 
 </ion-content>

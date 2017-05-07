@@ -1,25 +1,29 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { Login } from '../login/login';
 import { Trivia } from '../trivia/trivia';
-import { TriviaDos } from '../triviaDos/triviaDos';
 
 
 @Component({
   selector: 'triviaUno',
   templateUrl: 'triviaUno.html'
 })
+
 export class TriviaUno{
 
-constructor(public navCtrl: NavController) {}
+ usu = { nombre:'',
+        Puntuacion:0,
+        cantidadCorrectas:0,
+        incorrectas:0,
+        gano:false};
 
+tituloResultado:String;
 
-siguiente(){
-  this.navCtrl.push(TriviaDos);
+constructor(public navCtrl: NavController, public NavParams: NavParams) {
+ this.usu = this.NavParams.data;
+this.tituloResultado=this.usu.gano?"Ganaste":"Perdiste"; 
+
 }
 
-anterior(){
-  this.navCtrl.push(Trivia);
-}
  
 }

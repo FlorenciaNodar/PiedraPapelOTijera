@@ -13,18 +13,30 @@ import { LoadingController } from 'ionic-angular';
   selector: 'page-login',
   templateUrl: 'login.html'
 })
+
+
 export class Login {
+
+   usu = { nombre:''};
   email: any;
   password: any;
-  constructor(public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire, public alertCtrl: AlertController) {}
+  constructor(public loadingCtrl: LoadingController,public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire, public alertCtrl: AlertController)
+   {
+     this.usu = this.navParams.data; 
+   }
  
   ionViewDidLoad() {
     console.log('ionViewDidLoad Login');
   }
  
+ Sonido(){
+
+
+   
+ }
  
   Login() {
-
+this.usu.nombre=this.email;
       let loader = this.loadingCtrl.create({
       content: "Espere...",
       duration: 3000

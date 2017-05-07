@@ -12,11 +12,14 @@ import {Autor} from '../autor/autor';
 })
 export class HelloIonicPage{
 
+  usu = { nombre:''};
+
+
 constructor(public navCtrl: NavController) {
   window.localStorage.removeItem('currentuser');
     if (!this.isLoggedin()) {
       console.log('You are not logged in');
-      this.navCtrl.push(Login);
+      this.navCtrl.push(Login, this.usu);
     }
   }
  
@@ -27,7 +30,7 @@ constructor(public navCtrl: NavController) {
   }
 
   trivia(){
-      this.navCtrl.push(Trivia);
+      this.navCtrl.push(Trivia, this.usu);
   } 
   reglas()
   {

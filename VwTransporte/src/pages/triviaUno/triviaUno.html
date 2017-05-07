@@ -22,44 +22,32 @@
 }
 </style>
 
-
-
-
-
 <ion-content  padding class="Login">
-
 <br>
-    <strong><h3 style="text-align: center">Elija una opción</h3></strong>
-    <br>
+    <strong><h3 style="text-align: center">Juego Finalizado!</h3></strong>
+<br>
 
 <ion-list radio-group>
-<div align="center">
-        <img src="assets/images/s29.jpg"/>
-      </div>
-  <ion-item>
-    <ion-label>Camino de cornisa</ion-label>
-    <ion-radio checked="true" value="go" ></ion-radio>
-  </ion-item>
 
-  <ion-item>
-    <ion-label>Pendiente ascendente</ion-label>
-    <ion-radio value="rust"></ion-radio>
-  </ion-item>
+    <ion-label style="font-size: 50px; text-align: center">{{tituloResultado}}</ion-label>
 
+
+
+Jugador:
   <ion-item>
-    <ion-label>Pendiente descendiente</ion-label>
-    <ion-radio value="python"></ion-radio>
-  </ion-item>
+    <ion-label>{{usu.nombre}}</ion-label>
+  </ion-item><br>
+Cantidad de Respuestas Correctas
+  <ion-item>
+    <ion-label>{{usu.cantidadCorrectas}}</ion-label>
+  </ion-item><br>
+
+Cantidad de Incorrectas
+  <ion-item>
+    <ion-label>{{usu.incorrectas}}</ion-label>
+  </ion-item><br>
+
+
 </ion-list>
-    <div style="text-align: center;">
-    <button ion-button icon-left (click)="anterior()" >
-        <ion-icon name="arrow-round-back"></ion-icon>
- Anterior
-</button>
-<button ion-button icon-right (click)="siguiente()" >
- Próximo
-  <ion-icon name="arrow-round-forward"></ion-icon>
-</button>
-</div> 
 
 </ion-content>
